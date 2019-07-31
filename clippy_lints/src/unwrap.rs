@@ -14,7 +14,7 @@ declare_clippy_lint! {
     ///
     /// **Why is this bad?** Using `if let` or `match` is more idiomatic.
     ///
-    /// **Known problems:** Limitations of the borrow checker might make unwrap() necessary sometimes?
+    /// **Known problems:** None
     ///
     /// **Example:**
     /// ```rust
@@ -31,7 +31,7 @@ declare_clippy_lint! {
     /// }
     /// ```
     pub UNNECESSARY_UNWRAP,
-    nursery,
+    complexity,
     "checks for calls of unwrap[_err]() that cannot fail"
 }
 
@@ -52,7 +52,7 @@ declare_clippy_lint! {
     ///
     /// This code will always panic. The if condition should probably be inverted.
     pub PANICKING_UNWRAP,
-    nursery,
+    correctness,
     "checks for calls of unwrap[_err]() that will always fail"
 }
 
